@@ -7,7 +7,7 @@ July 25th, 2025
 Bikeshare Exploration in Chicago, New York City, and Washington
 
 ### Description
-Describe what your project is about and what it does
+Explore descriptive statistics on bikesharing in three major cities for the first half of 2017.
 
 ### Files used
 Include the files used
