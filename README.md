@@ -10,10 +10,10 @@ Bikeshare Exploration in Chicago, New York City, and Washington
 Explore descriptive statistics on bikesharing in three major cities for the first half of 2017.
 
 ### Files used
-*bikeshare.py
-*washington.csv
-*chicago.csv
-*new_york_city.csv
+* bikeshare.py
+* washington.csv
+* chicago.csv
+* new_york_city.csv
 
 ### Credits
 Udacity's website gave me the prompts and inspiration!
