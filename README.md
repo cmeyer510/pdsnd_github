@@ -4,7 +4,7 @@
 July 25th, 2025
 
 ### Project Title
-Replace the Project Title
+Bikeshare Exploration in Chicago, New York City, and Washington
 
 ### Description
 Describe what your project is about and what it does
