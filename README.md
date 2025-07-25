@@ -15,6 +15,13 @@ Explore descriptive statistics on bikesharing in three major cities for the firs
 * chicago.csv
 * new_york_city.csv
 
+### How to Run the Project
+1. Run the command "ipython bikeshare.py" in your terminal
+2. Type in either Chicago, New York City, or Chiacgo when prompted
+3. Choose a month when prompted
+4. Choose a day of the week when prompted
+5. Select yes or no to viewing lines of raw data
+
 ### Credits
 Udacity's website gave me the prompts and inspiration!
 
