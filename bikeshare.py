@@ -13,6 +13,10 @@ CITY_DATA = {
     'washington': 'washington.csv' 
 }
 
+#Add print divider function
+def print_divider():
+    print('-' * 40)
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -47,7 +51,7 @@ def get_filters():
         else:
             print("Invalid input. Please choose a valid day of the week or 'all'.")
 
-    print('-'*40)
+    print_divider()
     return city, month, day
 
 # Show raw data if requested 
@@ -116,7 +120,7 @@ def time_stats(df, month, day):
     print("Most common hour:", popular_hour)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_divider()
     
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
@@ -137,7 +141,7 @@ def station_stats(df):
     print("Most frequent trip:", popular_trip)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_divider()
     
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
@@ -160,7 +164,7 @@ def trip_duration_stats(df):
     print(f"Average trip duration for all users was: {avg_hours}h {avg_minutes}m {avg_seconds}s")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_divider()
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
@@ -204,7 +208,7 @@ def user_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_divider()
 
 
 def main():
