@@ -13,6 +13,10 @@ CITY_DATA = {
     'washington': 'washington.csv' 
 }
 
+#Add print divider function
+def print_divider():
+    print('-' * 40)
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -47,26 +51,22 @@ def get_filters():
         else:
             print("Invalid input. Please choose a valid day of the week or 'all'.")
 
-    print('-'*40)
+    print_divider()
     return city, month, day
 
 # Show raw data if requested 
 def display_raw_data(df):
     """Displays 5 rows of raw data at a time upon user request."""
     row_start = 0
-    row_end = 5
-
-    show_data = input("Would you like to see 5 lines of raw data? Enter yes to view, or no to skip: ").strip().lower()
-    while show_data == 'yes' and row_start < len(df):
-        print(df.iloc[row_start:row_end])
+    while True:
+        show_data = input("Would you like to see 5 lines of raw data? (yes/no): ").strip().lower()
+        if show_data != 'yes':
+            break
+        print(df.iloc[row_start:row_start + 5])
         row_start += 5
-        row_end += 5
-
         if row_start >= len(df):
             print("No more data to display.")
             break
-
-        show_data = input("Would you like to see 5 more rows? Enter yes to continue, or no to proceed to analysis: ").strip().lower()
 
 def load_data(city, month, day):
     """
@@ -120,7 +120,7 @@ def time_stats(df, month, day):
     print("Most common hour:", popular_hour)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_divider()
     
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
@@ -141,7 +141,7 @@ def station_stats(df):
     print("Most frequent trip:", popular_trip)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_divider()
     
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
@@ -164,7 +164,7 @@ def trip_duration_stats(df):
     print(f"Average trip duration for all users was: {avg_hours}h {avg_minutes}m {avg_seconds}s")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_divider()
 
 def user_stats(df):
     """Displays user type and gender statistics on bikeshare users."""
@@ -208,7 +208,7 @@ def user_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_divider()
 
 
 def main():
