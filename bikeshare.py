@@ -54,19 +54,15 @@ def get_filters():
 def display_raw_data(df):
     """Displays 5 rows of raw data at a time upon user request."""
     row_start = 0
-    row_end = 5
-
-    show_data = input("Would you like to see 5 lines of raw data? Enter yes to view, or no to skip: ").strip().lower()
-    while show_data == 'yes' and row_start < len(df):
-        print(df.iloc[row_start:row_end])
+    while True:
+        show_data = input("Would you like to see 5 lines of raw data? (yes/no): ").strip().lower()
+        if show_data != 'yes':
+            break
+        print(df.iloc[row_start:row_start + 5])
         row_start += 5
-        row_end += 5
-
         if row_start >= len(df):
             print("No more data to display.")
             break
-
-        show_data = input("Would you like to see 5 more rows? Enter yes to continue, or no to proceed to analysis: ").strip().lower()
 
 def load_data(city, month, day):
     """
